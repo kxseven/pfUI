@@ -26,6 +26,7 @@ pfUI.module = {}
 pfUI.modules = {}
 pfUI.environment = {}
 pfUI.movables = {}
+pfUI.version = {}
 
 pfLocaleClass = {}
 pfLocaleBagtypes = {}
@@ -51,7 +52,15 @@ pfUI:SetScript("OnEvent", function()
       pfUI_profiles = {}
     end
 
+    -- read pfUI version from .toc file
+    local major, minor, fix = pfUI.api.strsplit(".", tostring(GetAddOnMetadata("pfUI", "Version")))
+    pfUI.version.major = tonumber(major) or 1
+    pfUI.version.minor = tonumber(minor) or 2
+    pfUI.version.fix   = tonumber(fix)   or 0
+    pfUI.version.string = pfUI.version.major .. "." .. pfUI.version.minor .. "." .. pfUI.version.fix
+
     pfUI:LoadConfig()
+    pfUI:MigrateConfig()
 
     -- reload environment
     pfUI.environment:UpdateFonts()
@@ -271,10 +280,3 @@ pfUI.info:SetScript("OnUpdate", function()
 end)
 
 pfUI.info:SetScript("OnClick", function() this:Hide() end)
-
-
--- A simple dummy function that can be used to check pfUIs presence before
--- attemoting to hook the custom OnClick support
-function pfUI.info.ping(...)
-    ping = "pong"
-end

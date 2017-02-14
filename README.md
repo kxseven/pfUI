@@ -1,14 +1,33 @@
 # pfUI
 
-An educational project for World of Warcraft (1.12) mostly known as "Vanilla" 
-which aimes to be a full replacement for the original Wow interface. The design 
-is highly inspired by TukUI and ElvUI (which I never used) as well as several 
-other screenshots I found around the web during the last 10 years. 
-It is completely written from scratch without any inclusion of 3rd party addons 
-or libraries. This is **not** an addon-pack like 
-[ShaguUI](http://shagu.org/shaguui/) which means that no 
-external Addons will be included. There will be support for external addons like 
+An educational project for World of Warcraft (1.12) mostly known as "Vanilla"
+which aimes to be a full replacement for the original Wow interface. The design
+is highly inspired by TukUI and ElvUI (which I never used) as well as several
+other screenshots I found around the web during the last 10 years.
+It is completely written from scratch without any inclusion of 3rd party addons
+or libraries. This is **not** an addon-pack like
+[ShaguUI](http://shagu.org/shaguui/) which means that no
+external Addons will be included. There will be support for external addons like
 MobHealth3 and HealComm, but they will be never shipped within the package.
+
+## Installation (Release)
+1. Download **[Release](https://github.com/shagu/pfUI/releases/latest)**
+2. Unpack the Zip
+3. Copy "pfUI" to Wow-Directory\Interface\AddOns
+4. Restart Wow
+
+## Installation (Latest)
+1. Download **[Latest](https://github.com/shagu/pfUI/archive/master.zip)**
+2. Unpack the Zip, rename the folder "pfUI-master" to "pfUI".
+3. Copy "pfUI" to Wow-Directory\Interface\AddOns
+4. Restart Wow
+
+## Recommended Addons
+* [DPSMate](https://github.com/Geigerkind/DPSMate) An advanced combat analyzation tool
+* [HealComm](https://github.com/Aviana/HealComm/releases) Visual representation of incoming heals
+* [WIM](http://addons.us.to/addon/wim), [WIM (continued)](https://github.com/shirsig/WIM) Give whispers an instant messenger feel
+* [MobHealth3](http://addons.us.to/addon/mobhealth) Estimates a mob's health
+* [Clean_Up](https://github.com/shirsig/Clean_Up) Automatically stacks and sorts your items.
 
 ## Commands
 
@@ -29,47 +48,45 @@ pfUI supports and contains language specific code for the following languages.
 
 ![Moving Frames](http://mephis.he-hosting.de/shaguaddons/pfUI/mmobase/moveit.jpg)
 
-## Recommended Addons
-* [DPSMate](https://github.com/Geigerkind/DPSMate) An advanced combat analyzation tool
-* [HealComm](https://github.com/Aviana/HealComm/releases) Visual representation of incoming heals
-* [WIM](http://addons.us.to/addon/wim), [WIM (continued)](https://github.com/shirsig/WIM) Give whispers an instant messenger feel
-* [MobHealth3](http://addons.us.to/addon/mobhealth) Estimates a mob's health
-* [Clean_Up](https://github.com/shirsig/Clean_Up-lib) Automatically stacks and sorts your items.
 
-## Installation (common)
-1. Download from Github as Zip, unpack and rename the folder pfUI-master to pfUI.
-2. Copy "pfUI" to Wow-Directory\Interface\AddOns
-3. Make sure to have the file "*Wow-Directory\Interface\AddOns\pfUI\pfUI.toc*"
-4. Restart Wow
+## Static Profiles
+In the `profiles` folder there are pre-configured pfUI profiles that you may wish to use. Copy `<profile-filename>` from the profiles folder into your `WTF/Account/<ACCOUNT-NAME>/SavedVariables/` folder and rename `<profile-filename>` to `pfUI.lua`
 
-## Installation (unix)
-	cd ~/Wow-Directory/Interface/AddOns && git clone http://github.com/shagu/pfUI.git
+### Profile: Healer
+![Healer Profile](https://github.com/kxseven/pfUI/blob/master/profiles/profile-Healer.png?raw=true)
+
 
 ## FAQ
-**What does "pfUI" stand for?**  
-The term "*pfui!*" is german and simply stands for "*pooh!*", because I'm not a 
-big fan of creating configuration UI's especially not via the Wow-API 
-(you might have noticed that in ShaguUI). 
+**What does "pfUI" stand for?**
+The term "*pfui!*" is german and simply stands for "*pooh!*", because I'm not a
+big fan of creating configuration UI's especially not via the Wow-API
+(you might have noticed that in ShaguUI).
 
-**How can I enable mouseover cast?**  
-Create a macro with "/pfcast SPELLNAME". 
+**What are the main differences between this version of pfUI and Shagu's?**
+Font oriented changes that make pfUI cleaner at higher resolutions (3k, 4k) and support for Clique
 
-**How can I checkout the current state?**  
+**How can I enable mouseover cast?**
+Create a macro with "/pfcast SPELLNAME".
+
+**Does Clique work with these Unitframes?**
+Yes, but you need to [use a version of Clique that has plugin support for pfUI](https://github.com/kxseven/Clique).
+
+**How can I checkout the current state?**
 See Installation Section. But be aware that things might not work for you.
 
-**When will it be ready?**  
+**When will it be ready?**
 I have no idea and no timeline yet. I'm working on it whenever I have motivation.
 
-**Why do I get lots of LUA Errors?**  
-Please disable all addons beside pfUI and check if you still get error messages. 
-If the messages are gone, check one addon after the other and report conflicting 
+**Why do I get lots of LUA Errors?**
+Please disable all addons beside pfUI and check if you still get error messages.
+If the messages are gone, check one addon after the other and report conflicting
 addons in the [Bugtracker](https://github.com/shagu/pfUI/issues).
 
-**How can I donate?**  
+**How can I donate?**
 You can't. I'm doing that for fun. Enjoy!
 
-**How can I contribute?**  
+**How can I contribute?**
 Report LUA-Errors and Issues in the [Bugtracker](https://github.com/shagu/pfUI/issues).
 
-**Everything from scratch?! Are you insane?**  
+**Everything from scratch?! Are you insane?**
 Yes.
