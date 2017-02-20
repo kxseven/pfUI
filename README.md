@@ -1,10 +1,10 @@
 # pfUI
 
 An educational project for World of Warcraft (1.12) mostly known as "Vanilla"
-which aimes to be a full replacement for the original Wow interface. The design
-is highly inspired by TukUI and ElvUI (which I never used) as well as several
+which aimes to be a full replacement for the original Wow interface in a single Addon.
+The design is highly inspired by TukUI and ElvUI (which I never used) as well as several
 other screenshots I found around the web during the last 10 years.
-It is completely written from scratch without any inclusion of 3rd party addons
+It is entirely written from scratch without any inclusion of 3rd party addons
 or libraries. This is **not** an addon-pack like
 [ShaguUI](http://shagu.org/shaguui/) which means that no
 external Addons will be included. There will be support for external addons like
@@ -67,7 +67,6 @@ Font oriented changes that make pfUI cleaner at higher resolutions (3k, 4k) and 
 
 **How can I enable mouseover cast?**
 Create a macro with "/pfcast SPELLNAME".
-
 **Does Clique work with these Unitframes?**
 Yes, but you need to [use a version of Clique that has plugin support for pfUI](https://github.com/kxseven/Clique).
 
@@ -86,7 +85,15 @@ addons in the [Bugtracker](https://github.com/shagu/pfUI/issues).
 You can't. I'm doing that for fun. Enjoy!
 
 **How can I contribute?**
-Report LUA-Errors and Issues in the [Bugtracker](https://github.com/shagu/pfUI/issues).
+**How can I contribute?**  
+Report Errors, Issues and Feature Requests in the [Bugtracker](https://github.com/shagu/pfUI/issues).
+Please make sure to have the latest version installed and check for conflicting addons beforehand.
+
+**Can I use Clique with pfUI?**  
+A pfUI compatible version of Clique can be found [Here](https://github.com/shagu/Clique/releases). If you want to keep your current version of Clique, you'll have to apply this [Patch](https://github.com/shagu/Clique/commit/a5ee56c3f803afbdda07bae9cd330e0d4a75d75a).
+
+**How can I enable mouseover cast?**  
+Create a macro with "/pfcast SPELLNAME". If you also want to see the cooldown, You might want to add "/run if nil then CastSpellByName("SPELLNAME") end" on top of the macro.
 
 **Everything from scratch?! Are you insane?**
-Yes.
+Most probably, Yes.
